@@ -1,0 +1,39 @@
+{
+  "name": "react-flight-streaming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "concat-stream": "^2.0.0",
+    "webvtt-parser": "https://github.com/annevk/webvtt"
+  },
+  "devDependencies": {
+    "@fab/actions": "^1.0.0-rc.1",
+    "@fab/cli": "^1.0.0-rc.1",
+    "@fab/input-static": "^1.0.0-rc.1",
+    "@fab/plugin-render-html": "^1.0.0-rc.1",
+    "@fab/plugin-rewire-assets": "^1.0.0-rc.1",
+    "@fab/server": "^1.0.0-rc.1"
+  },
+  "scripts": {
+    "build": "echo \"noop\"",
+    "build:fab": "npm run build && npm run fab:build",
+    "fab:build": "fab build",
+    "fab:serve": "fab serve fab.zip",
+    "fab:build-serve": "clear && yarn fab:build && yarn fab:serve",
+    "fab:test": "run-p --race \"fab:test:*\"",
+    "fab:test:serve": "fab serve fab.zip",
+    "fab:test:test-local": "curl -v --retry 3 --retry-connrefused http://localhost:3000/despacito"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geelen/react-flight-streaming.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geelen/react-flight-streaming/issues"
+  },
+  "homepage": "https://github.com/geelen/react-flight-streaming#readme"
+}
